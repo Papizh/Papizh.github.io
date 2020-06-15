@@ -36,13 +36,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _examples_landing_landing_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./examples/landing/landing.component */ "./src/app/examples/landing/landing.component.ts");
+/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
 
 
 
 
 var routes = [
-    { path: '', component: _examples_landing_landing_component__WEBPACK_IMPORTED_MODULE_3__["LandingComponent"] }
+    { path: '', component: _landing_landing_component__WEBPACK_IMPORTED_MODULE_3__["LandingComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -175,12 +175,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _examples_examples_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./examples/examples.module */ "./src/app/examples/examples.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/navbar/navbar.component */ "./src/app/shared/navbar/navbar.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/navbar/navbar.component */ "./src/app/shared/navbar/navbar.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var ng2_nouislider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng2-nouislider */ "./node_modules/ng2-nouislider/src/ng2-nouislider.js");
+/* harmony import */ var ng2_nouislider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(ng2_nouislider__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var jw_bootstrap_switch_ng2__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! jw-bootstrap-switch-ng2 */ "./node_modules/jw-bootstrap-switch-ng2/fesm5/jw-bootstrap-switch-ng2.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
 
  // this is needed!
+
+
+
+
 
 
 
@@ -195,19 +204,27 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-                _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _landing_landing_component__WEBPACK_IMPORTED_MODULE_13__["LandingComponent"],
+                _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__["NavbarComponent"]
             ],
             imports: [
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"].forRoot(),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
-                _examples_examples_module__WEBPACK_IMPORTED_MODULE_6__["ExamplesModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_9__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"],
+                ng2_nouislider__WEBPACK_IMPORTED_MODULE_10__["NouisliderModule"],
+                jw_bootstrap_switch_ng2__WEBPACK_IMPORTED_MODULE_11__["JwBootstrapSwitchNg2Module"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_12__["AgmCoreModule"].forRoot({
+                    apiKey: 'YOUR_KEY_HERE'
+                })
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -217,88 +234,32 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/examples/examples.module.ts":
-/*!*********************************************!*\
-  !*** ./src/app/examples/examples.module.ts ***!
-  \*********************************************/
-/*! exports provided: ExamplesModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExamplesModule", function() { return ExamplesModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var ng2_nouislider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ng2-nouislider */ "./node_modules/ng2-nouislider/src/ng2-nouislider.js");
-/* harmony import */ var ng2_nouislider__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ng2_nouislider__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var jw_bootstrap_switch_ng2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! jw-bootstrap-switch-ng2 */ "./node_modules/jw-bootstrap-switch-ng2/fesm5/jw-bootstrap-switch-ng2.js");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/examples/landing/landing.component.ts");
-
-
-
-
-
-
-
-
-
-var ExamplesModule = /** @class */ (function () {
-    function ExamplesModule() {
-    }
-    ExamplesModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"],
-                ng2_nouislider__WEBPACK_IMPORTED_MODULE_4__["NouisliderModule"],
-                jw_bootstrap_switch_ng2__WEBPACK_IMPORTED_MODULE_6__["JwBootstrapSwitchNg2Module"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_7__["AgmCoreModule"].forRoot({
-                    apiKey: 'YOUR_KEY_HERE'
-                })
-            ],
-            declarations: [
-                _landing_landing_component__WEBPACK_IMPORTED_MODULE_8__["LandingComponent"],
-            ]
-        })
-    ], ExamplesModule);
-    return ExamplesModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/examples/landing/landing.component.html":
-/*!*********************************************************!*\
-  !*** ./src/app/examples/landing/landing.component.html ***!
-  \*********************************************************/
+/***/ "./src/app/landing/landing.component.html":
+/*!************************************************!*\
+  !*** ./src/app/landing/landing.component.html ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper \">\n  <div class=\"page-header page-header-small\">\n    <div class=\"page-header-image rellax-header\" data-rellax-speed=\"-8\"\n      style=\"background-image: url('assets/img/bg6.jpg');\">\n    </div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h1 class=\"title\">This is our great company.</h1>\n        <div class=\"text-center\">\n          <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\">\n            <i class=\"fab fa-facebook-square\"></i>\n          </a>\n          <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\">\n            <i class=\"fab fa-twitter\"></i>\n          </a>\n          <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\">\n            <i class=\"fab fa-google-plus\"></i>\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-about-us\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-8 ml-auto mr-auto text-center\">\n          <h2 class=\"title\">Who we are?</h2>\n          <h5 class=\"description\">Ми молода і амбітна команда яка організовує різноманітні івенти і курси для людей які\n            хочуть увійти в IT! </h5>\n        </div>\n      </div>\n      <div class=\"separator separator-primary\"></div>\n      <div class=\"section-story-overview\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div class=\"image-container image-left\" style=\"background-image: url('assets/img/login.jpg')\">\n              <!-- First image on the left side -->\n              <p class=\"blockquote blockquote-primary\">\"Over the span of the satellite record, Arctic sea\n                ice has been declining significantly, while sea ice in the Antarctichas increased very\n                slightly\"\n                <br>\n                <br>\n                <small>-NOAA</small>\n              </p>\n            </div>\n            <!-- Second image on the left side of the article -->\n            <div class=\"image-container\" style=\"background-image: url('assets/img/bg3.jpg')\"></div>\n          </div>\n          <div class=\"col-md-5\">\n            <!-- First image on the right side, above the article -->\n            <div class=\"image-container image-right\" style=\"background-image: url('assets/img/bg1.jpg')\">\n            </div>\n            <h3>So what does the new record for the lowest level of winter ice actually mean</h3>\n            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and\n              that process will continue whatever happens with climate change. Even if the Arctic\n              continues to be one of the fastest-warming regions of the world, it will always be plunged\n              into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural\n              reasons, there’s huge variety of the state of the ice.\n            </p>\n            <p>\n              For a start, it does not automatically follow that a record amount of ice will melt this\n              summer. More important for determining the size of the annual thaw is the state of the\n              weather as the midnight sun approaches and temperatures rise. But over the more than 30\n              years of satellite records, scientists have observed a clear pattern of decline,\n              decade-by-decade.\n            </p>\n            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and\n              that process will continue whatever happens with climate change. Even if the Arctic\n              continues to be one of the fastest-warming regions of the world, it will always be plunged\n              into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural\n              reasons, there’s huge variety of the state of the ice.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-team text-center\">\n    <div class=\"container\">\n      <h2 class=\"title\">Here is our team</h2>\n      <div class=\"team\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"team-player\">\n              <img src=\"assets/img/avatar.jpg\" alt=\"Thumbnail Image\" class=\"rounded-circle img-fluid img-raised\">\n              <h4 class=\"title\">Romina Hadid</h4>\n              <p class=\"category text-primary\">Model</p>\n              <p class=\"description\">You can write here details about one of your team members. You can\n                give more details about what they do. Feel free to add some\n                <a href=\"#\">links</a> for people to be able to follow them outside the site.</p>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-twitter\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-instagram\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-facebook-square\"></i></a>\n            </div>\n          </div>\n          <div class=\"col-md-4\">\n            <div class=\"team-player\">\n              <img src=\"assets/img/ryan.jpg\" alt=\"Thumbnail Image\" class=\"rounded-circle img-fluid img-raised\">\n              <h4 class=\"title\">Khrystyna Papizh</h4>\n              <p class=\"category text-primary\">Co-founder - PM-guru</p>\n              <p class=\"description\">You can write here details about one of your team members. You can\n                give more details about what they do. Feel free to add some\n                <a href=\"#\">links</a> for people to be able to follow them outside the site.</p>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-twitter\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-linkedin\"></i></a>\n            </div>\n          </div>\n          <div class=\"col-md-4\">\n            <div class=\"team-player\">\n              <img src=\"assets/img/eva.jpg\" alt=\"Thumbnail Image\" class=\"rounded-circle img-fluid img-raised\">\n              <h4 class=\"title\">Eva Jenner</h4>\n              <p class=\"category text-primary\">Fashion</p>\n              <p class=\"description\">You can write here details about one of your team members. You can\n                give more details about what they do. Feel free to add some\n                <a href=\"#\">links</a> for people to be able to follow them outside the site.</p>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-google-plus\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-youtube\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-twitter\"></i></a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-contact-us text-center\">\n    <div class=\"container\">\n      <h2 class=\"title\">Want to work with us?</h2>\n      <p class=\"description\">Your project is very important to us.</p>\n      <div class=\"row\">\n        <div class=\"col-lg-6 text-center col-md-8 ml-auto mr-auto\">\n          <div class=\"input-group input-lg\" [ngClass]=\"{'input-group-focus':focus===true}\">\n            <div class=\"input-group-prepend\">\n              <span class=\"input-group-text\">\n                <i class=\"now-ui-icons users_circle-08\"></i>\n              </span>\n            </div>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Left Font Awesome Icon\" (focus)=\"focus=true\"\n              (blur)=\"focus=false\">\n          </div>\n          <div class=\"input-group input-lg\" [ngClass]=\"{'input-group-focus':focus1===true}\">\n            <div class=\"input-group-prepend\">\n              <span class=\"input-group-text\">\n                <i class=\"now-ui-icons ui-1_email-85\"></i>\n              </span>\n            </div>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Left Font Awesome Icon\" (focus)=\"focus1=true\"\n              (blur)=\"focus1=false\">\n          </div>\n          <div class=\"textarea-container\">\n            <textarea class=\"form-control\" name=\"name\" rows=\"4\" cols=\"80\" placeholder=\"Type a message...\"></textarea>\n          </div>\n          <div class=\"send-button\">\n            <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdgEFQClRJf09SxgZl2Kmlm4Tl8laOk6ync8KFT17LY42J2UQ/viewform\"\n              class=\"btn btn-primary btn-round btn-block btn-lg\">Send Message</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <footer class=\"footer footer-default\">\n    <div class=\"container\">\n      <nav>\n        <ul>\n          <li>\n            <a href=\"https://www.creative-tim.com\">\n              Creative Tim\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/about-us\">\n              About Us\n            </a>\n          </li>\n          <li>\n            <a href=\"http://blog.creative-tim.com\">\n              Blog\n            </a>\n          </li>\n          <li>\n            <a href=\"https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md\">\n              MIT License\n            </a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"copyright\">\n        &copy;\n        {{data | date: 'yyyy'}}, Designed by\n        <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n        <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n      </div>\n    </div>\n  </footer>\n</div>\n"
+module.exports = "<div class=\"wrapper \">\n  <div class=\"page-header page-header-small\">\n    <div class=\"page-header-image rellax-header\" data-rellax-speed=\"-8\"\n      style=\"background-image: url('assets/img/bg6.jpg');\">\n    </div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h1 class=\"title\">This is our great company.</h1>\n        <div class=\"text-center\">\n          <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\">\n            <i class=\"fab fa-facebook-square\"></i>\n          </a>\n          <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\">\n            <i class=\"fab fa-twitter\"></i>\n          </a>\n          <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\">\n            <i class=\"fab fa-google-plus\"></i>\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-about-us\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-8 ml-auto mr-auto text-center\">\n          <h2 class=\"title\">Who we are?</h2>\n          <h5 class=\"description\">Ми молода і амбітна команда яка організовує різноманітні івенти і курси для людей які\n            хочуть увійти в IT! </h5>\n        </div>\n      </div>\n      <div class=\"separator separator-primary\"></div>\n      <div class=\"section-story-overview\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div class=\"image-container image-left\" style=\"background-image: url('assets/img/bg3.jpg')\">\n              <!-- First image on the left side -->\n              <p class=\"blockquote blockquote-primary\">\"Over the span of the satellite record, Arctic sea\n                ice has been declining significantly, while sea ice in the Antarctichas increased very\n                slightly\"\n                <br>\n                <br>\n                <small>-NOAA</small>\n              </p>\n            </div>\n            <!-- Second image on the left side of the article -->\n            <div class=\"image-container\" style=\"background-image: url('assets/img/bg3.jpg')\"></div>\n          </div>\n          <div class=\"col-md-5\">\n            <!-- First image on the right side, above the article -->\n            <div class=\"image-container image-right\" style=\"background-image: url('assets/img/bg1.jpg')\">\n            </div>\n            <h3>So what does the new record for the lowest level of winter ice actually mean</h3>\n            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and\n              that process will continue whatever happens with climate change. Even if the Arctic\n              continues to be one of the fastest-warming regions of the world, it will always be plunged\n              into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural\n              reasons, there’s huge variety of the state of the ice.\n            </p>\n            <p>\n              For a start, it does not automatically follow that a record amount of ice will melt this\n              summer. More important for determining the size of the annual thaw is the state of the\n              weather as the midnight sun approaches and temperatures rise. But over the more than 30\n              years of satellite records, scientists have observed a clear pattern of decline,\n              decade-by-decade.\n            </p>\n            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and\n              that process will continue whatever happens with climate change. Even if the Arctic\n              continues to be one of the fastest-warming regions of the world, it will always be plunged\n              into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural\n              reasons, there’s huge variety of the state of the ice.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-team text-center\">\n    <div class=\"container\">\n      <h2 class=\"title\">Here is our team</h2>\n      <div class=\"team\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"team-player\">\n              <img src=\"assets/img/avatar.jpg\" alt=\"Thumbnail Image\" class=\"rounded-circle img-fluid img-raised\">\n              <h4 class=\"title\">Romina Hadid</h4>\n              <p class=\"category text-primary\">Model</p>\n              <p class=\"description\">You can write here details about one of your team members. You can\n                give more details about what they do. Feel free to add some\n                <a href=\"#\">links</a> for people to be able to follow them outside the site.</p>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-twitter\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-instagram\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-facebook-square\"></i></a>\n            </div>\n          </div>\n          <div class=\"col-md-4\">\n            <div class=\"team-player\">\n              <img src=\"assets/img/ryan.jpg\" alt=\"Thumbnail Image\" class=\"rounded-circle img-fluid img-raised\">\n              <h4 class=\"title\">Khrystyna Papizh</h4>\n              <p class=\"category text-primary\">Co-founder - PM-guru</p>\n              <p class=\"description\">You can write here details about one of your team members. You can\n                give more details about what they do. Feel free to add some\n                <a href=\"#\">links</a> for people to be able to follow them outside the site.</p>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-twitter\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-linkedin\"></i></a>\n            </div>\n          </div>\n          <div class=\"col-md-4\">\n            <div class=\"team-player\">\n              <img src=\"assets/img/eva.jpg\" alt=\"Thumbnail Image\" class=\"rounded-circle img-fluid img-raised\">\n              <h4 class=\"title\">Eva Jenner</h4>\n              <p class=\"category text-primary\">Fashion</p>\n              <p class=\"description\">You can write here details about one of your team members. You can\n                give more details about what they do. Feel free to add some\n                <a href=\"#\">links</a> for people to be able to follow them outside the site.</p>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-google-plus\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-youtube\"></i></a>\n              <a href=\"#pablo\" class=\"btn btn-primary btn-icon btn-round\"><i class=\"fab fa-twitter\"></i></a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-contact-us text-center\">\n    <div class=\"container\">\n      <h2 class=\"title\">Want to work with us?</h2>\n      <p class=\"description\">Your project is very important to us.</p>\n      <div class=\"row\">\n        <div class=\"col-lg-6 text-center col-md-8 ml-auto mr-auto\">\n          <div class=\"input-group input-lg\" [ngClass]=\"{'input-group-focus':focus===true}\">\n            <div class=\"input-group-prepend\">\n              <span class=\"input-group-text\">\n                <i class=\"now-ui-icons users_circle-08\"></i>\n              </span>\n            </div>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Left Font Awesome Icon\" (focus)=\"focus=true\"\n              (blur)=\"focus=false\">\n          </div>\n          <div class=\"input-group input-lg\" [ngClass]=\"{'input-group-focus':focus1===true}\">\n            <div class=\"input-group-prepend\">\n              <span class=\"input-group-text\">\n                <i class=\"now-ui-icons ui-1_email-85\"></i>\n              </span>\n            </div>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Left Font Awesome Icon\" (focus)=\"focus1=true\"\n              (blur)=\"focus1=false\">\n          </div>\n          <div class=\"textarea-container\">\n            <textarea class=\"form-control\" name=\"name\" rows=\"4\" cols=\"80\" placeholder=\"Type a message...\"></textarea>\n          </div>\n          <div class=\"send-button\">\n            <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdgEFQClRJf09SxgZl2Kmlm4Tl8laOk6ync8KFT17LY42J2UQ/viewform\"\n              class=\"btn btn-primary btn-round btn-block btn-lg\">Send Message</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <footer class=\"footer footer-default\">\n    <div class=\"container\">\n      <nav>\n        <ul>\n          <li>\n            <a href=\"https://www.creative-tim.com\">\n              Creative Tim\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/about-us\">\n              About Us\n            </a>\n          </li>\n          <li>\n            <a href=\"http://blog.creative-tim.com\">\n              Blog\n            </a>\n          </li>\n          <li>\n            <a href=\"https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md\">\n              MIT License\n            </a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"copyright\">\n        &copy;\n        {{data | date: 'yyyy'}}, Designed by\n        <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n        <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n      </div>\n    </div>\n  </footer>\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/app/examples/landing/landing.component.scss":
-/*!*********************************************************!*\
-  !*** ./src/app/examples/landing/landing.component.scss ***!
-  \*********************************************************/
+/***/ "./src/app/landing/landing.component.scss":
+/*!************************************************!*\
+  !*** ./src/app/landing/landing.component.scss ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2V4YW1wbGVzL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuc2NzcyJ9 */"
 
 /***/ }),
 
-/***/ "./src/app/examples/landing/landing.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/app/examples/landing/landing.component.ts ***!
-  \*******************************************************/
+/***/ "./src/app/landing/landing.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/landing/landing.component.ts ***!
+  \**********************************************/
 /*! exports provided: LandingComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -332,8 +293,8 @@ var LandingComponent = /** @class */ (function () {
     LandingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-landing',
-            template: __webpack_require__(/*! ./landing.component.html */ "./src/app/examples/landing/landing.component.html"),
-            styles: [__webpack_require__(/*! ./landing.component.scss */ "./src/app/examples/landing/landing.component.scss")]
+            template: __webpack_require__(/*! ./landing.component.html */ "./src/app/landing/landing.component.html"),
+            styles: [__webpack_require__(/*! ./landing.component.scss */ "./src/app/landing/landing.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], LandingComponent);

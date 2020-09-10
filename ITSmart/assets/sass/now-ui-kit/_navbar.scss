@@ -3,7 +3,6 @@
   padding-bottom: $navbar-padding-base;
   min-height: 53px;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 
   a {
     vertical-align: middle;
@@ -43,14 +42,14 @@
 
     .nav-link:not(.btn) {
       text-transform: uppercase;
-      font-size: $font-size-mini;
       padding: $padding-base-vertical $padding-base-horizontal;
-      line-height: $line-height-nav-link;
+      line-height: 2rem;
 
       i.fab + p,
       i.now-ui-icons + p {
         margin-left: 3px;
-        font-size: large;
+        font-size: medium;
+        font-weight: 600;
       }
 
       i.fab,
@@ -64,7 +63,7 @@
 
       i.now-ui-icons {
         top: 4px;
-        font-size: 22px;
+        font-size: 18px;
       }
 
       &.profile-photo {
@@ -170,6 +169,7 @@
 }
 
 .bg-primary {
+  max-height: 50px;
   background-color: $primary-color !important;
 }
 

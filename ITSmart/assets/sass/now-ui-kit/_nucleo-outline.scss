@@ -7,12 +7,18 @@ Created using IcoMoon - icomoon.io
 -------------------------------- */
 
 @font-face {
-  font-family: 'Nucleo Outline';
-  src: url('../fonts/nucleo-outline.eot');
-  src: url('../fonts/nucleo-outline.eot') format('embedded-opentype'),
-  url('../fonts/nucleo-outline.woff2') format('woff2'),
-  url('../fonts/nucleo-outline.woff') format('woff'),
-  url('../fonts/nucleo-outline.ttf') format('truetype');
+  font-family: "Nucleo Outline";
+  src: url("../fonts/nucleo-outline.eot");
+  src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"),
+    url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"),
+    url("../fonts/nucleo-outline.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rubik";
+  src: url("../fonts/Rubik-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,9 +29,9 @@ Created using IcoMoon - icomoon.io
 
 .now-ui-icons {
   display: inline-block;
-  font: normal normal normal 14px/1 'Nucleo Outline';
+  font: normal normal normal 14px/1 "Nucleo Outline";
   font-size: inherit;
-  speak: none;
+  speak-as: none;
   text-transform: none;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
@@ -132,8 +138,8 @@ Created using IcoMoon - icomoon.io
 	font icons
 -------------------------*/
 
-.now-ui-icons.ui-1_check:before{
-    content: "\ea22";
+.now-ui-icons.ui-1_check:before {
+  content: "\ea22";
 }
 
 .now-ui-icons.ui-1_email-85:before {

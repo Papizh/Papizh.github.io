@@ -440,7 +440,6 @@
     .brand .n-logo {
         padding-right: 3em;
         max-width: 28em;
-        margin-top: 13em;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -458,7 +457,6 @@
 }
 @media (min-width: 1200px) {
     .brand .n-logo {
-        margin-top: 13em;
         max-width: 60em;
         margin-right: 5em;
     }

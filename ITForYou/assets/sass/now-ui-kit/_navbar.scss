@@ -136,6 +136,7 @@
     box-shadow: none;
     color: $white-color;
     padding-top: 14px;
+    position: fixed;
   }
 
   &.bg-white:not(.navbar-transparent) {
